@@ -16,13 +16,13 @@
 				<span class="material-icons">description</span>
 				<span class="text">Documentos</span>
 			</router-link>
-			<router-link to="/team" class="button">
+			<router-link to="/users" class="button">
 				<span class="material-icons">group</span>
 				<span class="text">Usuarios</span>
 			</router-link>
-			<router-link to="/contact" class="button">
-				<span class="material-icons">email</span>
-				<span class="text">Contact</span>
+			<router-link to="/admin" class="button">
+				<span class="material-icons">paid</span>
+				<span class="text">Administración</span>
 			</router-link>
 		</div>
 
@@ -67,10 +67,8 @@ aside {
 	transition: 0.2s ease-in-out;
 
 	.flex {
-		flex: 1 1 0%;
+		flex: none ;
 	}
-
-	
 
 	.menu-toggle-wrap {
 		display: flex;
@@ -144,7 +142,10 @@ aside {
 				}
 
 				&:hover{
-					background-color: --primary-alt;
+					background-color: var(--primary-alt);
+					.material-icons, .text{
+					color: var(--plain-color);
+					}
 				}
 			}
 
@@ -168,7 +169,7 @@ aside {
 		.menu-toggle-wrap {
 			top: 0rem;
 			
-			.menu-toggle {
+			.menu-toggle { 
 				transform: rotate(-180deg);
 			}
 		}

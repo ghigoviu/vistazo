@@ -1,27 +1,40 @@
 <template>
-	<div class="app">
 
-		<!-- Sidebar -->
-		<Sidebar />
+	
+	<div class="app">
+		<!-- Navbar -->
+		<Navbar />
+
+		<div class="window-app">
+			<!-- Sidebar -->
+			<Sidebar />
 
 		<!-- Content -->
 		<router-view />
+		</div>
 	</div>
+
+		
+		
 </template>
 
 <script setup>
 import Sidebar from './components/Sidebar.vue'
+import Navbar from './components/Navbar.vue'
+
 
 </script>
 
 <style lang="scss">
+@import '~@/../mdb/scss/index.free.scss';
+
 :root {
 	--primary: #ef812c;
 	--primary-alt: #ffb782;
 	--grey: #64748b;
 	--dark: #1e293b;
 	--dark-alt: #334155;
-	--light: #f1f5f9;
+	--light: #fff;
 	--sidebar-width: 300px;
 }
 
@@ -45,14 +58,15 @@ button {
 }
 
 .app {
-	display: flex;
+	.window-app{
+		display: flex;
 
-	main {
-		flex: 1 1 0;
-		padding: 2rem;
-
-		@media (max-width: 1024px) {
-			padding-left: 6rem;
+		main {
+			flex: 1 1 0;
+			padding: 1.5rem;
+			@media (max-width: 1024px) {
+				padding-left: 6rem;
+			}
 		}
 	}
 }
