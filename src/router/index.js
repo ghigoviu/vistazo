@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Users from '../views/Users.vue'
 
+
 const router = createRouter({
 	history: createWebHistory(),
 	routes: [
@@ -18,6 +19,7 @@ const router = createRouter({
 			path: '/users',
 			component: Users
 		},
+		
 	],
 })
 

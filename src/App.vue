@@ -1,6 +1,4 @@
 <template>
-
-	
 	<div class="app">
 		<!-- Navbar -->
 		<Navbar />
@@ -14,14 +12,11 @@
 		</div>
 	</div>
 
-		
-		
 </template>
 
 <script setup>
-import Sidebar from './components/Sidebar.vue'
+import Sidebar from './components/sidebar/Sidebar.vue'
 import Navbar from './components/Navbar.vue'
-
 
 </script>
 
@@ -35,7 +30,7 @@ import Navbar from './components/Navbar.vue'
 	--dark: #1e293b;
 	--dark-alt: #334155;
 	--light: #fff;
-	--sidebar-width: 300px;
+	--sidebar-width: 250px;
 }
 
 * {

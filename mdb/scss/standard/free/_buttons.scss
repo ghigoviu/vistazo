@@ -4,7 +4,6 @@
 
 .btn {
   font-family: $btn-font-family;
-  text-transform: uppercase;
   vertical-align: bottom;
   border: 0;
   box-shadow: $btn-box-shadow;
@@ -281,6 +280,7 @@
 
 .btn-lg {
   @include button-size-mdb(
+    
     $btn-padding-top-lg,
     $btn-padding-right-lg,
     $btn-padding-bottom-lg,
@@ -288,6 +288,8 @@
     $btn-font-size-lg,
     $btn-line-height-lg
   );
+  width: 250px;
+  border-radius: 0,
 }
 
 .btn-sm {

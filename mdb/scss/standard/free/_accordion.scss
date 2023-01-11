@@ -7,6 +7,10 @@
     }
   }
 
+  &:hover{
+    background-color: $primary-alt;
+  }
+
   &:focus {
     border-color: $accordion-button-focus-border-color;
     outline: 0;
@@ -24,8 +28,10 @@
 }
 
 .accordion-borderless {
+  
   .accordion-item {
     border: 0;
+    
     .accordion-button {
       border-radius: $accordion-borderless-button-border-radius;
       &:not(.collapsed) {

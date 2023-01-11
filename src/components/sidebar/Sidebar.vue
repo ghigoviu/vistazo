@@ -12,20 +12,71 @@
 				<span class="material-icons">home</span>
 				<span class="text">Inicio</span>
 			</router-link>
-			<router-link to="/about" class="button">
-				<span class="material-icons">description</span>
-				<span class="text">Documentos</span>
-			</router-link>
-			<router-link to="/users" class="button">
-				<span class="material-icons">group</span>
-				<span class="text">Usuarios</span>
-			</router-link>
+			
+			<!--
 			<router-link to="/admin" class="button">
 				<span class="material-icons">paid</span>
 				<span class="text">Administración</span>
-			</router-link>
-		</div>
+			</router-link>     -->
 
+			
+			<MDBDropdown v-model="dropdownEspacios" align="lg-end">
+				<MDBDropdownToggle @click="dropdownEspacios = !dropdownEspacios" color="primary-sidebar" size="lg" class="button">
+					<font-awesome-icon icon="fa-solid fa-location-dot" fixed-width size="xl"/> 
+					<span class="text">Espacios</span>
+					<!--
+					<font-awesome-icon icon="fa-solid fa-dollar-sign" fixed-width size="2xl"/>
+					-->
+				</MDBDropdownToggle>
+				<MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+					<router-link to="/" class="button">
+						<span class="text">General</span>
+					</router-link>  
+					<router-link to="/about" class="button">
+						<span class="text">Por Estado</span>
+					</router-link> 
+					<router-link to="/espacios-general" class="button">
+						<span class="text">Aprobados</span>
+					</router-link>    
+				</MDBDropdownMenu>
+			</MDBDropdown>
+
+			<MDBDropdown v-model="dropdownDocumentos" align="lg-end">
+				<MDBDropdownToggle @click="dropdownDocumentos = !dropdownDocumentos" color="primary-sidebar" size="lg" class="button">
+					<font-awesome-icon icon="fas fa-file-lines" fixed-width size="xl"/>
+					<span class="text">Documentos</span>
+				</MDBDropdownToggle>
+				<MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+					<router-link to="/" class="button">
+						<span class="text">Todos</span>
+					</router-link>  
+					<router-link to="/about" class="button">
+						<span class="text">En proceso</span>
+					</router-link>    
+				</MDBDropdownMenu>
+			</MDBDropdown>
+
+			<MDBDropdown v-model="dropdownUsers" align="lg-end">
+				<MDBDropdownToggle @click="dropdownUsers = !dropdownUsers" color="primary-sidebar" size="lg" class="button">
+					<font-awesome-icon icon="fa-solid fa-user-group" fixed-width size="xl"/>
+					<span class="text">Usuarios</span>
+				</MDBDropdownToggle>
+				<MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+					<router-link to="/about" class="button">
+						<span class="text">General</span>
+					</router-link>  
+					<router-link to="/" class="button">
+						<span class="text">Altas</span>
+					</router-link>  
+					<router-link to="/about" class="button">
+						<span class="text">Bajas</span>
+					</router-link>
+					
+				</MDBDropdownMenu>
+			</MDBDropdown>
+		</div>	
+
+		<!-- 
 		<div class="flex"></div>
 		
 		<div class="menu">
@@ -34,11 +85,14 @@
 				<span class="text">Configuración</span>
 			</router-link>
 		</div>
+		-->
 	</aside>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdb-vue-ui-kit";
 
 const is_expanded = ref(localStorage.getItem("is_expanded") === "true")
 
@@ -46,6 +100,11 @@ const ToggleMenu = () => {
 	is_expanded.value = !is_expanded.value
 	localStorage.setItem("is_expanded", is_expanded.value)
 }
+
+const dropdownEspacios = ref(false);
+const dropdownDocumentos = ref(false);
+const dropdownUsers = ref(false);
+
 </script>
 
 <style lang="scss" scoped>
@@ -61,7 +120,7 @@ aside {
 
 	width: calc(2rem + 40px);
 	overflow: hidden;
-	min-height: 100vh;
+	min-height: 95vh;
 	padding: 1rem;
 
 	transition: 0.2s ease-in-out;
@@ -86,7 +145,7 @@ aside {
 				color: var(--plain-color);
 				transition: 0.2s ease-out;
 			}
-			
+	
 			&:hover {
 				.material-icons {
 					transform: translateX(0.7rem);
@@ -95,7 +154,7 @@ aside {
 		}
 	}
 
-	h3, .button .text {
+	h3, .button .text .btn {
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 	}
@@ -109,20 +168,24 @@ aside {
 
 	.menu {
 		margin: 0 -1rem;
+		
 		.button {
 			display: flex;
 			align-items: center;
 			text-decoration: none;
 			transition: 0.2s ease-in-out;
-			padding: 0.5rem 1rem;
+			padding: 0.75rem 1.25rem;
 			.material-icons {
 				font-size: 2rem;
 				color: var(--plain-color);
 				transition: 0.2s ease-in-out;
 			}
 			.text {
+				font-size: 1rem;
 				color: var(--plain-color);
 				transition: 0.2s ease-in-out;
+				opacity: 0;
+				margin-left: 1.5rem;
 			}
 
 			&:hover {
@@ -148,18 +211,6 @@ aside {
 					}
 				}
 			}
-
-			
-		}
-	}
-
-	.footer {
-		opacity: 0;
-		transition: opacity 0.3s ease-in-out;
-
-		p {
-			font-size: 0.875rem;
-			color: var(--grey);
 		}
 	}
 
@@ -178,12 +229,7 @@ aside {
 			opacity: 1;
 		}
 
-		.button {
-			.material-icons {
-				margin-right: 1rem;
-			}
-		}
-
+		
 		.footer {
 			opacity: 0;
 		}

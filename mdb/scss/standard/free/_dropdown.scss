@@ -1,5 +1,5 @@
 .dropdown-menu {
-  color: $dropdown-color;
+  color: $red-100;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -25,6 +25,7 @@
         border-top-right-radius: $dropdown-item-border-radius;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        
       }
     }
 
@@ -64,13 +65,13 @@
   &:hover,
   &:focus {
     color: $dropdown-state-color;
-    background-color: $dropdown-state-background-color;
+    background-color: $primary-alt;
   }
 
   &.active,
   &:active {
     color: $dropdown-state-color;
-    background-color: $dropdown-state-background-color;
+    background-color: $primary;
   }
 }
 
