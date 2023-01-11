@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Users from '../views/Users.vue'
+import EspaciosGeneral from '../views/espacios/EspaciosGeneral.vue'
 
 
 const router = createRouter({
@@ -18,6 +19,10 @@ const router = createRouter({
 		{
 			path: '/users',
 			component: Users
+		},
+		{
+			path: '/espacios-general',
+			component: EspaciosGeneral
 		},
 		
 	],

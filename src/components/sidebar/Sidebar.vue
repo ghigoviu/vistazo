@@ -29,13 +29,13 @@
 					-->
 				</MDBDropdownToggle>
 				<MDBDropdownMenu aria-labelledby="dropdownMenuButton">
-					<router-link to="/" class="button">
+					<router-link to="/espacios-general" class="button">
 						<span class="text">General</span>
 					</router-link>  
-					<router-link to="/about" class="button">
+					<router-link to="/espacios-estado" class="button">
 						<span class="text">Por Estado</span>
 					</router-link> 
-					<router-link to="/espacios-general" class="button">
+					<router-link to="/espacios-aprobados" class="button">
 						<span class="text">Aprobados</span>
 					</router-link>    
 				</MDBDropdownMenu>
@@ -168,7 +168,6 @@ aside {
 
 	.menu {
 		margin: 0 -1rem;
-		
 		.button {
 			display: flex;
 			align-items: center;

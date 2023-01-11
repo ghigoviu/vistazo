@@ -9,10 +9,7 @@
       <img :src="logoURL" alt="Vue" /> 
     </div>
     
-   
-
-    
-    <MDBCollapse v-model="collapse5" id="navbarRightAlignExample">
+    <MDBCollapse v-model="collapse5" id="navbarRightAlign">
       <MDBNavbarNav>    
 
         <!-- Notificaction -->
