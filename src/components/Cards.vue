@@ -3,22 +3,34 @@
     <MDBCol sm="3">
       <MDBCard>
         <MDBCardBody>
-          <MDBCardTitle>Special title treatment</MDBCardTitle>
+          <MDBCardTitle>Documentos</MDBCardTitle>
           <MDBCardText>
-            With supporting text below as a natural lead-in to additional content.
+            
           </MDBCardText>
-          <MDBBtn tag="a" href="#!" color="primary">Go somewhere</MDBBtn>
+          <MDBBtn tag="a" href="#!" color="danger">45</MDBBtn> 
+          <MDBBtn tag="a" href="#!" color="warning">20</MDBBtn> 
+          <MDBBtn tag="a" href="#!" color="success">20</MDBBtn> 
+          <MDBBtn tag="a" href="#!" color="primary">Ver informe</MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
-    <MDBCol sm="3">
+    <MDBCol sm="4">
       <MDBCard>
         <MDBCardBody>
-          <MDBCardTitle>Special title treatment</MDBCardTitle>
+          <MDBCardTitle>Espacios registrados: 45</MDBCardTitle>
+          
+          <MDBBtn tag="a" href="#!" color="primary">Ver informe</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
+    <MDBCol sm="4">
+      <MDBCard>
+        <MDBCardBody>
+          <MDBCardTitle>Informe 3</MDBCardTitle>
           <MDBCardText>
-            With supporting text below as a natural lead-in to additional content.
+            Espacios registrados: 45
           </MDBCardText>
-          <MDBBtn tag="a" href="#!" color="primary">Go somewhere</MDBBtn>
+          <MDBBtn tag="a" href="#!" color="primary">Ver informe completo</MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>

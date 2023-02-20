@@ -33,7 +33,7 @@
 						<span class="text">General</span>
 					</router-link>  
 					<router-link to="/espacios-estado" class="button">
-						<span class="text">Por Estado</span>
+						<span class="text">Estado</span>
 					</router-link> 
 					<router-link to="/espacios-aprobados" class="button">
 						<span class="text">Aprobados</span>
@@ -71,7 +71,6 @@
 					<router-link to="/about" class="button">
 						<span class="text">Bajas</span>
 					</router-link>
-					
 				</MDBDropdownMenu>
 			</MDBDropdown>
 		</div>	

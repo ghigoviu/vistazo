@@ -1,9 +1,9 @@
 <template>
     <main id="EspaciosGeneral-page">
-        <h1>Vista general de espacios</h1>
+        <h1>Usuarios</h1>
 
         <a href="/nuevo">
-            <MDBBtn color="primary" > Registrar </MDBBtn>
+            <MDBBtn color="primary" > Registrar nuevo </MDBBtn>
         </a>
         
         <div> <br> </div>
