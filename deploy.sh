@@ -17,3 +17,5 @@ git commit -m 'deploy'
 git push -f git@github.com:ghigoviu/big-view.git master:gh-pages
 
 cd -
+
+npm run dev
