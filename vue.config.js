@@ -1,5 +1,3 @@
 module.exports = {
-    publicPath: 'big-cview'
-    
+    publicPath: 'big-view'
 }
-
