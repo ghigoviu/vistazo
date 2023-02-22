@@ -5,8 +5,8 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite --host",
-    "preview": "vite preview",
-    "deploy": "sh deploy.sh"
+    "preview": "vite preview"
+    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
